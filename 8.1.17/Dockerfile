@@ -9,7 +9,7 @@ ENV PATH=${JETTY_HOME}/bin:${PATH}
 
 WORKDIR /opt
 
-RUN curl -ssL http://eclipse.org/downloads/download.php?file=/jetty/${JETTY_VERSION}/dist/jetty-distribution-${JETTY_VERSION}.tar.gz&r=1  -o jetty.tar.gz && \
+RUN curl -ssL http://download.eclipse.org/jetty/${JETTY_VERSION}/dist/jetty-distribution-${JETTY_VERSION}.tar.gz -o jetty.tar.gz && \
     tar -zxvf jetty.tar.gz -C /opt/ && \
     rm -rf jetty.tar.gz && \
     mv /opt/jetty-distribution-* /opt/jetty
